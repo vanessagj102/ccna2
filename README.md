@@ -36,10 +36,14 @@ R1-CORE-VSGJ(config)#
 configure terminal 
 hostname SW-LAB1-vsgj
 
+
+
 configure terminal 
 hostname SW-LAB2-vsgj
 
 configure terminal
 hostname SW-CORE-VSGJ
+
+
 
 
