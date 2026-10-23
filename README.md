@@ -27,3 +27,19 @@ imagen de topologia
 | PC-Laboratorio-3 | SW-Lab1 → Fa0/6 | 20 | `192.168.20.12/24` | `192.168.20.254` |
 | PC-Dirección-1 | SW-Lab1 → Fa0/7 | 30 | `192.168.30.10/24` | `192.168.30.254` |
 | PC-Gestión | SW-Core → Fa0/9 | 99 | `192.168.99.10/24` | `192.168.99.254` |
+
+asignar nombres a los dispositivos
+#configure terminal
+#hostname R1-CORE-VSGJ
+R1-CORE-VSGJ(config)#
+
+configure terminal 
+hostname SW-LAB1-vsgj
+
+configure terminal 
+hostname SW-LAB2-vsgj
+
+configure terminal
+hostname SW-CORE-VSGJ
+
+
