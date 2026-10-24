@@ -366,6 +366,8 @@ copy running-config startup-config
 enable
 show interfaces trunk
 ```
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b09fc597-ad5c-4716-9801-e1d0685a38e6" />
+
 ### guardar la configuracion.
 ```bash
 enable
@@ -410,13 +412,6 @@ R1-CORE-VSGJ(config-subif)#exit
 
 R1-CORE-VSGJ(config)#end
 R1-CORE-VSGJ#copy running-config startup-config
-```
-
-### Verificar la configuración
-
-```bash
-R1-CORE-VSGJ#show ip interface brief
-R1-CORE-VSGJ#show ip route
 ```
 
 ```bash
