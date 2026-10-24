@@ -96,7 +96,11 @@ login
 end
 copy running-config startup-config
 ```
-## crear las vlans
+## CREAR LAS VLANs
+
+### SW-COREvsgj
+
+```bash
 enable
 configure terminal
 
@@ -120,14 +124,205 @@ vlan 111
 name Nativa
 exit
 
-vlan 999
-name Blackhole
+end
+copy running-config startup-config
+```
+### SW-Lab1VSGJ
+
+```bash
+enable
+configure terminal
+
+vlan 10
+name Administracion
+exit
+
+vlan 20
+name Laboratorios
+exit
+
+vlan 30
+name Direccion
+exit
+
+vlan 99
+name Gestion
+exit
+
+vlan 111
+name Nativa
+exit
+
+end
+copy running-config startup-config
+```
+### SW-lab2VSGJ
+
+```bash
+enable
+configure terminal
+
+vlan 10
+name Administracion
+exit
+
+vlan 20
+name Laboratorios
+exit
+
+vlan 30
+name Direccion
+exit
+
+vlan 99
+name Gestion
+exit
+
+vlan 111
+name Nativa
+exit
+
+end
+copy running-config startup-config
+```
+## ASIGNAR LOS PUERTOS A LAS VLANs
+
+### SW-COREvsgj
+```bash
+enable
+configure terminal
+
+interface fa0/9
+switchport mode access
+switchport access vlan 99
+exit
+
+end
+copy running-config startup-config
+```
+### SW-Lab1VSGJ
+
+```bash
+enable
+configure terminal
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/3
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/4
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/5
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/6
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/7
+switchport mode access
+switchport access vlan 30
+exit
+
+end
+copy running-config startup-config
+```
+### SW-lab2VSGJ
+
+```bash
+enable
+configure terminal
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/3
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/4
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/5
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/6
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/7
+switchport mode access
+switchport access vlan 30
 exit
 
 end
 copy running-config startup-config
 
+```
+### Verificación en los switches
 
+```bash
+show vlan brief
+```
+### HABILITAR LOS ENLACES TRONCALES
+### SW-COREvsgj
 
+```bash
 
+enable
+configure terminal
 
+interface fa0/1
+switchport mode trunk
+switchport trunk native vlan 111
+switchport trunk allowed vlan 10,20,30,99,111
+no shutdown
+exit
+
+interface gi0/1
+switchport mode trunk
+switchport trunk native vlan 111
+switchport trunk allowed vlan 10,20,30,99,111
+no shutdown
+exit
+
+interface gi0/2
+switchport mode trunk
+switchport trunk native vlan 111
+switchport trunk allowed vlan 10,20,30,99,111
+no shutdown
+exit
+
+end
+copy running-config startup-config
+```
