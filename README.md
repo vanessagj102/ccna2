@@ -28,7 +28,9 @@ imagen de topologia
 | PC-Dirección-1 | SW-Lab1 → Fa0/7 | 30 | `192.168.30.10/24` | `192.168.30.254` |
 | PC-Gestión | SW-Core → Fa0/9 | 99 | `192.168.99.10/24` | `192.168.99.254` |
 
-#asignar nombres a los dispositivos
+
+###asignar nombres a los dispositivos
+
 configure terminal
 hostname R1-CORE-VSGJ
 
@@ -41,7 +43,8 @@ hostname SW-lab2VSGJ
 configure terminal
 hostname SW-COREvsgj 
 
-configuracion básica de sw y router (contraseñas)
+###configuracion básica de sw y router (contraseñas)
+'''bash
 SW-Core
 enable
 configure terminal
@@ -51,6 +54,7 @@ password proyecto2711
 login
 end
 copy running-config startup-config
+´´´
 
 Switch SW-Lab1
 enable
