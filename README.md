@@ -467,7 +467,7 @@ copy running-config startup-config
 
 
 
-en sw core
+en SW-CORE-VSGJ
 enable
 configure terminal
 vlan 999
