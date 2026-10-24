@@ -30,21 +30,23 @@ imagen de topologia
 
 
 ## asignar los nombres a los sw y roter
-
-
+```bash
 configure terminal
 hostname R1-CORE-VSGJ
-
+```
+```bash
 configure terminal 
 hostname SW-lab1VSGJ
-
+```
+```bash
 configure terminal 
 hostname SW-lab2VSGJ
-
+```
+```bash
 configure terminal
 hostname SW-COREvsgj 
-
-## Configuración de switches y router(contraseñas)
+```
+## Configuración de sw y router(contraseñas)
 
 ### SW-Core
 ```bash
@@ -58,7 +60,7 @@ end
 copy running-config startup-config
 ```
 
-## Switch SW-Lab1
+## SW-Lab1
 ```bash
 enable
 configure terminal
@@ -70,7 +72,7 @@ end
 copy running-config startup-config
 ```
 
-## Switch SW-Lab2
+## SW-Lab2
 ```bash
 enable
 configure terminal
