@@ -1,6 +1,8 @@
 # ccna2
 imagen de topologia
-<img width="1440" height="900" alt="esenario topologico" src="https://github.com/user-attachments/assets/3d7593d9-3e06-4f79-ac54-9f9b8f3c92f2" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/05911c32-a19f-4826-85f7-d980a7108deb" />
+
 ### Tabla A: Dispositivos Intermedios (Routers y Switches)
 
 | Dispositivo / Interfaz | VLAN | Segmento de Red Base | Dirección IP a Calcular / Configurar | Máscara de Subred | Gateway por Defecto |
