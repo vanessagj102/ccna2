@@ -29,20 +29,61 @@ imagen de topologia
 | PC-Gestión | SW-Core → Fa0/9 | 99 | `192.168.99.10/24` | `192.168.99.254` |
 
 asignar nombres a los dispositivos
-#configure terminal
-#hostname R1-CORE-VSGJ
-R1-CORE-VSGJ(config)#
+configure terminal
+hostname R1-CORE-VSGJ
 
 configure terminal 
-hostname SW-LAB1-vsgj
-
-
+hostname SW-lab1VSGJ
 
 configure terminal 
-hostname SW-LAB2-vsgj
+hostname SW-lab2VSGJ
 
 configure terminal
-hostname SW-CORE-VSGJ
+hostname SW-COREvsgj 
+
+configuracion básica de sw y router (contraseñas)
+SW-Core
+enable
+configure terminal
+enable secret proyecto2711
+line console 0
+password proyecto2711
+login
+end
+copy running-config startup-config
+
+Switch SW-Lab1
+enable
+configure terminal
+enable secret proyecto2711
+line console 0
+password proyecto2711
+login
+end
+copy running-config startup-config
+
+Switch SW-Lab2
+enable
+configure terminal
+enable secret proyecto2711
+line console 0
+password proyecto2711
+login
+end
+copy running-config startup-config
+
+Router
+enable
+configure terminal
+enable secret proyecto2711
+line console 0
+password proyecto2711
+login
+end
+copy running-config startup-config
+
+
+
 
 
 
