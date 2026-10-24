@@ -96,7 +96,36 @@ login
 end
 copy running-config startup-config
 ```
+## crear las vlans
+enable
+configure terminal
 
+vlan 10
+name Administracion
+exit
+
+vlan 20
+name Laboratorios
+exit
+
+vlan 30
+name Direccion
+exit
+
+vlan 99
+name Gestion
+exit
+
+vlan 111
+name Nativa
+exit
+
+vlan 999
+name Blackhole
+exit
+
+end
+copy running-config startup-config
 
 
 
